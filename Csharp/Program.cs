@@ -12,7 +12,7 @@ namespace Csharp
             Console.WriteLine("Hello " + name);
             */
 
-			/* Basic data types
+			// Basic data types
             bool canVote = true; //boolean type t/f
 
             char grade = 'A'; //character type
@@ -27,13 +27,17 @@ namespace Csharp
             
             double maxDouble = double.MaxValue; //double is a 32bit number with a max value of 1.79x10^308 with 15 decimals of precision.
 
+            Console.WriteLine("Maximum integer: " + maxInt);
+            Console.WriteLine("Maximum long: " + maxLong);
+            Console.WriteLine("Maximum decimal: " + maxDec);
+            Console.WriteLine("Maximum float: " + maxFloat);
+            Console.WriteLine("Maximum double: " + maxDouble);
             
-            */
-
-
+            /* Looping
 			for (int i = 0; i < args.Length; i++){
                 Console.WriteLine(args[i]);  
             }
+            */
         }
     }
 
