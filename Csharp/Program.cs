@@ -9,11 +9,13 @@ namespace Csharp
     {
         static void Main(string[] args)
         {
+        
             /*  Basic Write and Read commands
             Console.Write("What is your name?: ");
             string name = Console.ReadLine();
             Console.WriteLine("Hello " + name);
             */
+
 
             /* Basic data types
             bool canVote = true; //boolean type t/f
@@ -38,6 +40,7 @@ namespace Csharp
             Console.WriteLine("Grade equals: " + grade);
             Console.WriteLine("Can you Vote?: " + !canVote);
             */
+
 
             /*Conditionals (relationship operators, logical operators, etc)
 
@@ -71,7 +74,8 @@ namespace Csharp
             }
             */
 
-            // Looping
+
+            /* Looping
             int i = 0;
             
 			while(i < 10){
@@ -103,7 +107,61 @@ namespace Csharp
 
 
             } while (!guess.Equals("15"));
+
+
+            for (int j = 0; j < 10; j++){
+                if ((j%2) > 0){
+                    Console.WriteLine(j);
+                }
+            }
+
+            string randStr = "Here are some random character";
+
+            foreach (char c in randStr){
+                Console.WriteLine(c);
+            }
+            */
+
+
+            //Escape sequences (\' \" \\ \b \n \t) & string manipulation
+
+            string sampleString = "A bunch of random words";
+
+            string sampleString2 = "more random words";
             
+            Console.WriteLine("is empty " + string.IsNullOrEmpty(sampleString));
+            
+            Console.WriteLine("is empty " + string.IsNullOrWhiteSpace(sampleString));
+            
+            Console.WriteLine("string length " + sampleString.Length);
+            
+            Console.WriteLine("Index of bunch " + sampleString.IndexOf("bunch"));
+            
+            Console.WriteLine("2nd Word " + sampleString.Substring(2, 6));
+            
+            Console.WriteLine("Strings equal " + sampleString.Equals(sampleString2));
+            
+            Console.WriteLine("Starts with a \"A bunch\" " + sampleString.StartsWith("A bunch"));
+            
+            Console.WriteLine("Ends with words " + sampleString.EndsWith("words"));
+
+            sampleString = sampleString.Trim();
+
+            sampleString = sampleString.Replace("words", "characters");
+            
+            Console.WriteLine(sampleString);
+
+            sampleString = sampleString.Remove(0, 2);
+            
+            Console.WriteLine(sampleString);
+
+            string[] names = new string[3] { "Matt", "Joe", "Paul" };
+            
+            Console.WriteLine("Name list: " + string.Join(", ", names));
+
+            string formatStr = string.Format("{0:c}", 1.56);
+            
+            Console.WriteLine(formatStr);
         }
     }
 
