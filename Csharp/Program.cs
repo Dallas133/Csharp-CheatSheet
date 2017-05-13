@@ -6,13 +6,13 @@ namespace Csharp
     {
         static void Main(string[] args)
         {
-			/*  Basic Write and Read commands
+            /*  Basic Write and Read commands
             Console.Write("What is your name?: ");
             string name = Console.ReadLine();
             Console.WriteLine("Hello " + name);
             */
 
-			// Basic data types
+            /* Basic data types
             bool canVote = true; //boolean type t/f
 
             char grade = 'A'; //character type
@@ -32,12 +32,75 @@ namespace Csharp
             Console.WriteLine("Maximum decimal: " + maxDec);
             Console.WriteLine("Maximum float: " + maxFloat);
             Console.WriteLine("Maximum double: " + maxDouble);
+            Console.WriteLine("Grade equals: " + grade);
+            Console.WriteLine("Can you Vote?: " + !canVote);
+            */
+
+            /*Conditionals (relationship operators, logical operators, etc)
+
+            int Age = 20;
+
+            if (Age >= 5 && Age <= 7){
+                Console.WriteLine("Ready for Kindergarten. ");
+            }
+            else if ((Age > 7) || (Age < 22)){
+                Console.WriteLine("You are in school. ");
+            }
+            else {
+                Console.WriteLine("You are ready for work. "); 
+            }
             
-            /* Looping
-			for (int i = 0; i < args.Length; i++){
-                Console.WriteLine(args[i]);  
+            bool canDrive = Age >= 16 ? true : false;
+            Console.WriteLine(canDrive);
+            
+            switch(Age){
+            
+                case 0:
+                    Console.WriteLine("Infant");
+                    break;
+                case 1:
+                case 2:
+                    Console.WriteLine("Young Adult");
+                    break;
+                default:
+                    Console.WriteLine("Human");
+                    break;
             }
             */
+
+            // Looping
+            int i = 0;
+            
+			while(i < 10){
+                if (i == 7){
+                    Console.WriteLine("7");
+                    i++;
+                    continue;
+                }
+
+                if (i == 9){
+                    Console.WriteLine("9");
+                    break;
+                }
+
+                if ((i % 2) > 0){
+                    Console.WriteLine(i);
+                }
+                i++;
+                
+            }
+
+
+            string guess;
+            
+            do
+            {
+                Console.WriteLine("Guess a Number ");
+                guess = Console.ReadLine();
+
+
+            } while (!guess.Equals("15"));
+            
         }
     }
 
