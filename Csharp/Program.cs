@@ -2,6 +2,10 @@
 
 
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
 
 namespace Csharp
 {
@@ -9,7 +13,7 @@ namespace Csharp
     {
         static void Main(string[] args)
         {
-        
+
             /*  Basic Write and Read commands
             Console.Write("What is your name?: ");
             string name = Console.ReadLine();
@@ -123,45 +127,62 @@ namespace Csharp
             */
 
 
-            //Escape sequences (\' \" \\ \b \n \t) & string manipulation
+            /*Escape sequences (\' \" \\ \b \n \t) & string manipulation
 
             string sampleString = "A bunch of random words";
 
             string sampleString2 = "more random words";
-            
+
             Console.WriteLine("is empty " + string.IsNullOrEmpty(sampleString));
-            
+
             Console.WriteLine("is empty " + string.IsNullOrWhiteSpace(sampleString));
-            
+
             Console.WriteLine("string length " + sampleString.Length);
-            
+
             Console.WriteLine("Index of bunch " + sampleString.IndexOf("bunch"));
-            
+
             Console.WriteLine("2nd Word " + sampleString.Substring(2, 6));
-            
+
             Console.WriteLine("Strings equal " + sampleString.Equals(sampleString2));
-            
+
             Console.WriteLine("Starts with a \"A bunch\" " + sampleString.StartsWith("A bunch"));
-            
+
             Console.WriteLine("Ends with words " + sampleString.EndsWith("words"));
 
             sampleString = sampleString.Trim();
 
             sampleString = sampleString.Replace("words", "characters");
-            
+
             Console.WriteLine(sampleString);
 
             sampleString = sampleString.Remove(0, 2);
-            
+
             Console.WriteLine(sampleString);
 
             string[] names = new string[3] { "Matt", "Joe", "Paul" };
-            
+
             Console.WriteLine("Name list: " + string.Join(", ", names));
 
             string formatStr = string.Format("{0:c}", 1.56);
-            
+
             Console.WriteLine(formatStr);
+
+            */
+
+            //Stringbuilder (are used to edit strings without creating new ones)
+
+            StringBuilder sb = new StringBuilder();
+            
+            sb.Append("This is a string with stringbuilder ");
+            
+            sb.AppendFormat("My name is {0} and this is stringbuilder using an {1}", "Dallas", "Array");
+            
+            sb.Replace("a", "e");
+            
+            sb.Remove(0, 4); 
+           
+            Console.WriteLine(sb.ToString());
+
         }
     }
 
