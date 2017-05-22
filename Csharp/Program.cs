@@ -14,14 +14,18 @@ namespace Csharp
         static void Main(string[] args)
         {
 
-            /*  Basic Write and Read commands
+            /*  
+            //Basic Write and Read commands
+            
             Console.Write("What is your name?: ");
             string name = Console.ReadLine();
             Console.WriteLine("Hello " + name);
             */
 
 
-            /* Basic data types
+            /* 
+            //Basic data types
+            
             bool canVote = true; //boolean type t/f
 
             char grade = 'A'; //character type
@@ -46,7 +50,8 @@ namespace Csharp
             */
 
 
-            /*Conditionals (relationship operators, logical operators, etc)
+            /*
+            //Conditionals (relationship operators, logical operators, etc)
 
             int Age = 20;
 
@@ -79,7 +84,9 @@ namespace Csharp
             */
 
 
-            /* Looping
+            /* 
+            //Looping
+            
             int i = 0;
             
 			while(i < 10){
@@ -100,7 +107,6 @@ namespace Csharp
                 i++;
                 
             }
-
 
             string guess;
             
@@ -127,7 +133,9 @@ namespace Csharp
             */
 
 
-            /*Escape sequences (\' \" \\ \b \n \t) & string manipulation
+            /*
+            
+            //Escape sequences (\' \" \\ \b \n \t) & string manipulation
 
             string sampleString = "A bunch of random words";
 
@@ -169,6 +177,8 @@ namespace Csharp
 
             */
 
+            /*
+            
             //Stringbuilder (are used to edit strings without creating new ones)
 
             StringBuilder sb = new StringBuilder();
@@ -183,6 +193,11 @@ namespace Csharp
            
             Console.WriteLine(sb.ToString());
 
+            */
+            
+            
+            
+            
         }
     }
 
