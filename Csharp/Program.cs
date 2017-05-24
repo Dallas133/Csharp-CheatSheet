@@ -194,9 +194,38 @@ namespace Csharp
             Console.WriteLine(sb.ToString());
 
             */
+
+            //Arrays
+
+            int[] randnumArray;
+
+            int[] randArray = new int[5];
+
+            int[] randArray2 = { 1, 2, 3, 4, 5 };
             
+            Console.WriteLine("Array Length: " + randArray2.Length);
             
+            Console.WriteLine("Item 0: " + randArray2[0]);
+
+            for (int i = 0; i < randArray2.Length; i++){
+                Console.WriteLine("{0} : {1}", i, randArray2[i]);
+            }
+
+            foreach(int num in randArray2){
+                Console.WriteLine(num);
+            }
             
+            Console.WriteLine("Where is 1?: " + Array.IndexOf(randArray2, 1));
+
+            string[] names = {"Dallas", "Sean", "Jackson"};
+
+            string nameStr = string.Join(",", names);
+
+            string[] nameArray = nameStr.Split(',');
+
+            foreach(string name in nameArray){
+                Console.WriteLine(name);
+            }
             
         }
     }
