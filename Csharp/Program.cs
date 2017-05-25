@@ -195,6 +195,7 @@ namespace Csharp
 
             */
 
+            /*
             //Arrays
 
             int[] randnumArray;
@@ -227,6 +228,35 @@ namespace Csharp
                 Console.WriteLine(name);
             }
             
+            */
+
+            /*
+                
+            //Multi-Arrays
+
+            int[,] multArray = new int[3, 3];
+
+            foreach(int num in multArray){
+                Console.WriteLine(num);
+            }
+
+            for (int x = 0; x < multArray.GetLength(0); x++){
+                for (int y = 0; y < multArray.GetLength(1); y++){
+                    Console.WriteLine("{0} | {1} : {2}", x, y, multArray[x,y]);
+                }
+            }
+            
+            */
+
+
+            //Lists (similar to vectors; array resizes FOR you
+
+            List<int> numList = new List<int>(); //how to declare a list
+
+            numList.Add(5);
+            numList.Add(15);
+            numList.Add(25);
+      
         }
     }
 
