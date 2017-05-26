@@ -290,7 +290,25 @@ namespace Csharp
             */
             
             
-    
+            
+            //Exception handling
+            
+            try{
+                Console.WriteLine("Divide 10 by ");
+                int num = int.Parse(Console.ReadLine());
+                Console.WriteLine("10 / {0} = {1}", num, (10/num));
+            }
+                
+            catch(DivideByZeroException ex){
+                Console.WriteLine("Can't divide by zero!");
+                Console.WriteLine(ex.GetType().Name);
+                Console.WriteLine("Error! " + ex.Message);
+            }
+               
+            catch(Exception ex){
+                Console.WriteLine(ex.GetType().Name);
+                Console.WriteLine("Error! " + ex.Message);
+            } 
                 
         }
     }
