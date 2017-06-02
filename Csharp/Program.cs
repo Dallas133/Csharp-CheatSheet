@@ -1,13 +1,11 @@
 ﻿//Dallas Carraher
 
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-
-namespace Csharp
+namespace Cheatsheet
 {
     class Program
     {
@@ -290,7 +288,7 @@ namespace Csharp
             */
             
             
-            
+            /*
             //Exception handling
             
             try{
@@ -309,6 +307,10 @@ namespace Csharp
                 Console.WriteLine(ex.GetType().Name);
                 Console.WriteLine("Error! " + ex.Message);
             } 
+            
+            */
+
+
                 
         }
     }
