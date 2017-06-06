@@ -335,7 +335,7 @@ namespace Cheatsheet
                 numOfAnimals++;
             }
 
-            public Animal(double height, double weight, string sound, string name)
+            public Animal(double height, double weight, string name, string sound)
             {
                 this.height = height;
                 this.weight = weight;
@@ -363,7 +363,7 @@ namespace Cheatsheet
 
                 Console.WriteLine("{0} says {1}", spot.name, spot.sound);
 
-                Console.WriteLine("Number of Animals" + Animal.getNumOfAnimals());
+                Console.WriteLine("Number of Animals Created = " + Animal.getNumOfAnimals());
 
                 Console.WriteLine(spot.toString());
 
