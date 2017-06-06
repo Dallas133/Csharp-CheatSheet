@@ -311,7 +311,8 @@ namespace Cheatsheet
         */
 
 
-        //Objects and their methods
+        /*
+        //Objects and methods
 
         class Animal
         {
@@ -370,39 +371,10 @@ namespace Cheatsheet
 
             //
 
-            static void Main(string[] args)
-            {
 
-                Animal spot = new Animal(15, 10, "Spot", "Woof");
-
-                Animal rex = new Animal(24, 100, "Rex", "Bark!"); 
-
-                Console.WriteLine("{0} is a tiny dog, he weighs {1} pounds and says {2}", spot.name, spot.weight, spot.sound);
-
-                Console.WriteLine("{0} is a big dog, he weighs {1} pounds and says {2}", rex.name, rex.weight, rex.sound);
-
-                Console.WriteLine("The number of Animal objects created = " + Animal.getNumOfAnimals());
-
-                Console.WriteLine(spot.toString());
-
-                Console.WriteLine(rex.toString());
-
-                Console.WriteLine(spot.getSum(1.4, 2.7));
-
-                Console.WriteLine(rex.getSum(1, 2));
-
-                Console.WriteLine(spot.getSum(num2: 1.4, num1: 2.7)); //if inputs are in incorrect order you can assign them with name and colon
-
-                Animal Grover = new Animal
-                {
-                    name = "Grover",
-                    height = 16,
-                    weight = 18,
-                    sound = "Grrr"
-                };
-
-            }
         }
+
+        //Objects and Inheritance
 
         class Dog : Animal 
         {
@@ -423,5 +395,48 @@ namespace Cheatsheet
                 return string.Format("{0} is {1} inches tall, weighs {2} lbs and likes to say {3} and eats {4}", name, height, weight, sound, favFood);
             }
         }
+
+		static void Main(string[] args)
+		{
+
+			Animal spot = new Animal(15, 10, "Spot", "Woof");
+
+			Animal rex = new Animal(24, 100, "Rex", "Bark!");
+
+			Console.WriteLine("{0} is a tiny dog, he weighs {1} pounds and says {2}", spot.name, spot.weight, spot.sound);
+
+			Console.WriteLine("{0} is a big dog, he weighs {1} pounds and says {2}", rex.name, rex.weight, rex.sound);
+
+			Console.WriteLine("The number of Animal objects created = " + Animal.getNumOfAnimals());
+
+			Console.WriteLine(spot.toString());
+
+			Console.WriteLine(rex.toString());
+
+			Console.WriteLine(spot.getSum(1.4, 2.7));
+
+			Console.WriteLine(rex.getSum(1, 2));
+
+			Console.WriteLine(spot.getSum(num2: 1.4, num1: 2.7)); //if inputs are in incorrect order you can assign them with name and colon
+
+			Animal Grover = new Animal
+			{
+				name = "Grover",
+				height = 16,
+				weight = 18,
+				sound = "Grrr"
+			};
+
+			Dog spike = new Dog();
+
+			Console.WriteLine(spike.toString());
+
+			spike = new Dog(20, 15, "Spike", "Grrr", "Chicken");
+
+			Console.WriteLine(spike.toString());
+		}
+        */
+
+
     }
 }
