@@ -393,8 +393,22 @@ namespace Cheatsheet
 
                 Console.WriteLine(spot.getSum(num2: 1.4, num1: 2.7)); //if inputs are in incorrect order you can assign them with name and colon
 
+                Animal Grover = new Animal
+                {
+                    name = "Grover",
+                    height = 16,
+                    weight = 18,
+                    sound = "Grrr"
+                };
 
             }
+        }
+
+        class Dog : Animal 
+        {
+            public string favFood { get; set; }
+
+            public Dog() : base()
         }
     }
 }
