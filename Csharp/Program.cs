@@ -25,6 +25,17 @@ namespace Cheatsheet
         Console.WriteLine("Hello " + name);
         */
 
+        /*
+        int intTemp = Convert.ToInt32(Console.ReadLine());
+
+        //or better method with default exception for faulty input
+
+        string input = Console.ReadLine();
+        int number;
+        Int32.TryParse(input, out number);
+
+        //Int.Parse()   Convert.ToInt()   Int.TryParse()
+        */
 
         /* 
         //Basic data types
@@ -316,7 +327,7 @@ namespace Cheatsheet
         */
 
 
-        /*
+
         //Objects and methods
 
         class Animal
@@ -401,9 +412,45 @@ namespace Cheatsheet
             }
         }
 
-		static void Main(string[] args)
-		{
+        //example abstract class
+        abstract class Shape
+        {
+            public abstract double area();
 
+            public void sayHi()
+            {
+                Console.WriteLine("Hello");
+            }
+        }
+
+        //example interface
+        public interface ShapeItem
+        {
+            double area();
+        }
+
+        //example object inheriting shape attributes
+        class Rectangle : Shape
+        {
+            private double length;
+            private double width;
+
+            public Rectangle(double num1, double num2)
+            {
+                length = num1;
+                width = num2;
+            }
+
+            public override double area()
+            {
+                return length * width;
+                throw new NotImplementedException();
+            }
+        }
+
+        static void Main(string[] args)
+		{
+            /*
 			Animal spot = new Animal(15, 10, "Spot", "Woof");
 
 			Animal rex = new Animal(24, 100, "Rex", "Bark!");
@@ -439,8 +486,19 @@ namespace Cheatsheet
 			spike = new Dog(20, 15, "Spike", "Grrr", "Chicken");
 
 			Console.WriteLine(spike.toString());
+			*/
+
+            string sideA = Console.ReadLine();
+            string sideB = Console.ReadLine();
+            int num1, num2;
+            Int32.TryParse(sideA, out num1);
+            Int32.TryParse(sideB, out num2);
+
+            Rectangle A = new Rectangle(num1, num2);
+
+
 		}
-        */
+
 
 
     }
