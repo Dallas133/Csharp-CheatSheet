@@ -311,15 +311,15 @@ namespace Cheatsheet
         */
 
 
-
+        //Objects and their methods
 
         class Animal
         {
             public double height { get; set; }
             public double weight { get; set; }
             public string sound { get; set; }
-
             public string name;
+
             public string Name
             {
                 get { return name; }
@@ -356,16 +356,43 @@ namespace Cheatsheet
                 return String.Format("{0} is {1} inches tall, weighs {2} lbs and likes to say {3}", name, height, weight, sound);
             }
 
+            //method overloading
+
+            public int getSum (int num1 = 1, int num2 = 1)
+            {
+                return num1 + num2;
+            }
+
+			public double getSum(double num1 = 1, double num2 = 1)
+			{
+				return num1 + num2;
+			}
+
+            //
+
             static void Main(string[] args)
             {
 
                 Animal spot = new Animal(15, 10, "Spot", "Woof");
 
-                Console.WriteLine("{0} says {1}", spot.name, spot.sound);
+                Animal rex = new Animal(24, 100, "Rex", "Bark!"); 
 
-                Console.WriteLine("Number of Animals Created = " + Animal.getNumOfAnimals());
+                Console.WriteLine("{0} is a tiny dog, he weighs {1} pounds and says {2}", spot.name, spot.weight, spot.sound);
+
+                Console.WriteLine("{0} is a big dog, he weighs {1} pounds and says {2}", rex.name, rex.weight, rex.sound);
+
+                Console.WriteLine("The number of Animal objects created = " + Animal.getNumOfAnimals());
 
                 Console.WriteLine(spot.toString());
+
+                Console.WriteLine(rex.toString());
+
+                Console.WriteLine(spot.getSum(1.4, 2.7));
+
+                Console.WriteLine(rex.getSum(1, 2));
+
+                Console.WriteLine(spot.getSum(num2: 1.4, num1: 2.7)); //if inputs are in incorrect order you can assign them with name and colon
+
 
             }
         }
