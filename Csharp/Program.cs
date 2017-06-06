@@ -1,5 +1,10 @@
 ﻿//Dallas Carraher
 
+/*  
+ * The goal of this project was to familiarize myself with the syntax and operations of Csharp.
+*/
+
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
