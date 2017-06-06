@@ -420,7 +420,7 @@ namespace Cheatsheet
 
             new public string toString()
             {
-                return string.Format("{0} is {1} inches tall, weighs {2} lbs and likes to say {3}, name, height, weight, sound");
+                return string.Format("{0} is {1} inches tall, weighs {2} lbs and likes to say {3} and eats {4}", name, height, weight, sound, favFood);
             }
         }
     }
