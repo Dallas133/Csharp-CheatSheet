@@ -417,6 +417,11 @@ namespace Cheatsheet
             {
                 this.favFood = favFood;
             }
+
+            new public string toString()
+            {
+                return string.Format("{0} is {1} inches tall, weighs {2} lbs and likes to say {3}, name, height, weight, sound");
+            }
         }
     }
 }
