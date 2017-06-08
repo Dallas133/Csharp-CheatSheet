@@ -326,7 +326,7 @@ namespace Cheatsheet
 
         */
 
-
+        /*
 
         //Objects and methods
 
@@ -412,6 +412,10 @@ namespace Cheatsheet
             }
         }
 
+        */
+
+        /*
+
         //example abstract class
         abstract class Shape
         {
@@ -445,6 +449,52 @@ namespace Cheatsheet
             {
                 return length * width;
                 throw new NotImplementedException();
+            }
+
+            //overloading with operators
+            public static Rectangle operator+ (Rectangle rect1, Rectangle rect2)
+            {
+                double rectLength = rect1.length + rect2.length;
+                double rectWidth = rect1.width + rect2.width;
+
+                return new Rectangle(rectLength, rectWidth);
+            }
+        }
+
+		class Triangle : Shape
+		{
+			private double theBase;
+			private double height;
+
+            public Triangle(double num1, double num2)
+			{
+				theBase = num1;
+				height = num2;
+			}
+
+			public override double area()
+			{
+				return .5 * (theBase * height);
+				throw new NotImplementedException();
+			}
+		}
+
+        */
+
+        class KeyValue<TKey, TValue>
+        {
+            public TKey key { get; set; }
+            public TValue value { get; set; }
+
+            public KeyValue(TKey k, TValue v)
+            {
+                key = k;
+                value = v;
+            }
+
+            public void showData()
+            {
+                Console.WriteLine("{0} is {1} ", this.key, this.value);
             }
         }
 
@@ -488,15 +538,39 @@ namespace Cheatsheet
 			Console.WriteLine(spike.toString());
 			*/
 
-            string sideA = Console.ReadLine();
-            string sideB = Console.ReadLine();
-            int num1, num2;
-            Int32.TryParse(sideA, out num1);
-            Int32.TryParse(sideB, out num2);
+            /*
 
-            Rectangle A = new Rectangle(num1, num2);
+            Console.Write("Please enter the side length: ");
+            var sideA = Convert.ToInt32(Console.ReadLine());
+			Console.Write("Please enter the side length: ");
+            var sideB = Convert.ToInt32(Console.ReadLine());
+
+            Shape rect = new Rectangle(sideA, sideB);
+            Shape tri = new Triangle(sideA, sideB);
+
+            Console.WriteLine("Rect area " + rect.area());
+            Console.WriteLine("Tri area " + tri.area());
+
+            Rectangle combRect = new Rectangle(sideA, sideB) + new Rectangle(sideA, sideB);
+
+            Console.WriteLine("Combrect area " + combRect.area());
+
+            */
+
+            KeyValue<string, string> batman = new KeyValue<string, string>("", "");
+
+            batman.key = "Batman";
+            batman.value = "Bruce Wayne";
+
+			KeyValue<int, string> appleTV = new KeyValue<int, string>(0, "");
+
+            appleTV.key = 1;
+            appleTV.value = "A brand new appleTV";
 
 
+            batman.showData();
+
+            appleTV.showData();
 		}
 
 
